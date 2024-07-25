@@ -11,6 +11,8 @@ import SDWebImageSwiftUI
 struct ContentView: View {
     @State var superheroName: String = ""
     @State var heroesData: ApiNetwork.HeroesData? = nil
+    @State var isLoading: Bool = false
+    
     var body: some View {
         VStack {
             TextField(
@@ -29,13 +31,18 @@ struct ContentView: View {
             )
             .autocorrectionDisabled()
             .onSubmit {
+                isLoading = true
                 Task {
                     do {
                         heroesData = try await ApiNetwork().getSuperHeroByNamme(name: superheroName)
                     } catch {
                         print("Error")
                     }
+                    isLoading = false
                 }
+            }
+            if (isLoading) {
+                ProgressView().padding(.top, 8).tint(.white)
             }
             ResultList(heroesData: $heroesData)
             Spacer()
