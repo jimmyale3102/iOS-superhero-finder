@@ -14,9 +14,14 @@ class ApiNetwork {
         let results: [SuperHeroData]
     }
     
-    struct SuperHeroData: Codable {
+    struct SuperHeroData: Codable, Identifiable {
         let id: String
         let name: String
+        let image: HeroImage
+    }
+    
+    struct HeroImage: Codable {
+        let url: String
     }
     
     func getSuperHeroByNamme(name: String) async throws -> HeroesData {
