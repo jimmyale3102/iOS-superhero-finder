@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var superheroName: String = ""
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            TextField(
+                "",
+                text: $superheroName,
+                prompt: Text("Superhero name")
+                    .font(.title2)
+                    .foregroundColor(.tertiaryApp)
+            )
+            .font(.title2)
+            .foregroundColor(.white)
+            .padding()
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(.secondaryApp, lineWidth: 2)
+            )
+            Spacer()
         }
         .padding()
+        .background(.backgroundApp)
     }
 }
 
