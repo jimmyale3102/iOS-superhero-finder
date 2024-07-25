@@ -25,6 +25,17 @@ struct ContentView: View {
                 RoundedRectangle(cornerRadius: 12)
                     .stroke(.secondaryApp, lineWidth: 2)
             )
+            .autocorrectionDisabled()
+            .onSubmit {
+                Task {
+                    do {
+                        let heroesData = try await ApiNetwork().getSuperHeroByNamme(name: superheroName)
+                        print(heroesData)
+                    } catch {
+                        print("Error")
+                    }
+                }
+            }
             Spacer()
         }
         .padding()

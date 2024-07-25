@@ -14,6 +14,7 @@
 		BF83772B2C51E5B800219370 /* SuperHeroFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83772A2C51E5B800219370 /* SuperHeroFinderTests.swift */; };
 		BF8377352C51E5B800219370 /* SuperHeroFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8377342C51E5B800219370 /* SuperHeroFinderUITests.swift */; };
 		BF8377372C51E5B800219370 /* SuperHeroFinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8377362C51E5B800219370 /* SuperHeroFinderUITestsLaunchTests.swift */; };
+		BF8377462C51F1EF00219370 /* ApiNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8377452C51F1EF00219370 /* ApiNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		BF8377302C51E5B800219370 /* SuperHeroFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperHeroFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8377342C51E5B800219370 /* SuperHeroFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroFinderUITests.swift; sourceTree = "<group>"; };
 		BF8377362C51E5B800219370 /* SuperHeroFinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroFinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BF8377452C51F1EF00219370 /* ApiNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				BF83771C2C51E5B800219370 /* Assets.xcassets */,
 				BF83771E2C51E5B800219370 /* SuperHeroFinder.entitlements */,
 				BF83771F2C51E5B800219370 /* Preview Content */,
+				BF8377452C51F1EF00219370 /* ApiNetwork.swift */,
 			);
 			path = SuperHeroFinder;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF8377462C51F1EF00219370 /* ApiNetwork.swift in Sources */,
 				BF83771B2C51E5B600219370 /* ContentView.swift in Sources */,
 				BF8377192C51E5B600219370 /* SuperHeroFinderApp.swift in Sources */,
 			);
