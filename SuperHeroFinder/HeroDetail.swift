@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import Charts
 
 struct HeroDetail: View {
     @State var isLoading: Bool = true
@@ -64,6 +65,7 @@ struct SuperHeroDetails: View {
                     .foregroundStyle(.gray)
                     .italic()
             }
+            SuperHeroStats(stats: superHeroData.powerstats)
             Spacer()
             
         }
@@ -72,6 +74,63 @@ struct SuperHeroDetails: View {
     }
 }
 
+struct SuperHeroStats: View {
+    let stats: ApiNetwork.Powerstats
+    var body: some View {
+        VStack {
+            Chart {
+                SectorMark(
+                    angle: .value("Count", Int(stats.combat) ?? 0),
+                    innerRadius: .ratio(0.7),
+                    angularInset: 2
+                )
+                .cornerRadius(8)
+                .foregroundStyle(by: .value("Category", "Combat"))
+                SectorMark(
+                    angle: .value("Count", Int(stats.durability) ?? 0),
+                    innerRadius: .ratio(0.7),
+                    angularInset: 2
+                )
+                .cornerRadius(8)
+                .foregroundStyle(by: .value("Category", "Durability"))
+                SectorMark(
+                    angle: .value("Count", Int(stats.intelligence) ?? 0),
+                    innerRadius: .ratio(0.7),
+                    angularInset: 2
+                )
+                .cornerRadius(8)
+                .foregroundStyle(by: .value("Category", "Intelligence"))
+                SectorMark(
+                    angle: .value("Count", Int(stats.power) ?? 0),
+                    innerRadius: .ratio(0.7),
+                    angularInset: 2
+                )
+                .cornerRadius(8)
+                .foregroundStyle(by: .value("Category", "Power"))
+                SectorMark(
+                    angle: .value("Count", Int(stats.speed) ?? 0),
+                    innerRadius: .ratio(0.7),
+                    angularInset: 2
+                )
+                .cornerRadius(8)
+                .foregroundStyle(by: .value("Category", "Speed"))
+                SectorMark(
+                    angle: .value("Count", Int(stats.strength) ?? 0),
+                    innerRadius: .ratio(0.7),
+                    angularInset: 2
+                )
+                .cornerRadius(8)
+                .foregroundStyle(by: .value("Category", "Strength"))
+            }
+            .padding()
+        }
+        .frame(maxWidth: .infinity, maxHeight: 350)
+        .background(.white)
+        .cornerRadius(25)
+        .padding()
+    }
+}
+
 #Preview {
-    HeroDetail(id: "5")
+    HeroDetail(id: "3")
 }
