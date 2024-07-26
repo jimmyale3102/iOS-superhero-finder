@@ -14,9 +14,9 @@ Welcome to the Superhero App! This app is designed to provide information about 
 ## Previews
 
 <p>
-    <img src="https://github.com/jimmyale3102/iOS-superhero-finder/blob/main/assets/0.jpeg" height="300"/>
-    <img src="https://github.com/jimmyale3102/iOS-superhero-finder/blob/main/assets/1.jpeg" height="300"/>    
-    <img src="https://github.com/jimmyale3102/iOS-superhero-finder/blob/main/assets/2.jpeg" height="300"/>
+    <img src="https://github.com/jimmyale3102/iOS-superhero-finder/blob/dev/Assets/0.jpeg" height="300"/>
+    <img src="https://github.com/jimmyale3102/iOS-superhero-finder/blob/dev/Assets/1.jpeg" height="300"/>    
+    <img src="https://github.com/jimmyale3102/iOS-superhero-finder/blob/dev/Assets/2.jpeg" height="300"/>
 </p>
 
 
