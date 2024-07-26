@@ -59,7 +59,7 @@ struct ResultList: View {
             List(heroesData?.results ?? []) { superHero in
                 ZStack {
                     SuperHeroItem(superHero: superHero)
-                    NavigationLink(destination: {  }) {
+                    NavigationLink(destination: HeroDetail(superHero.id)) {
                         EmptyView()
                     }
                     .opacity(0)
